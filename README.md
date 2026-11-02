@@ -56,7 +56,7 @@ bookmark_project/
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/titlewize_assignment.git
-cd bookmark-management-api
+cd bookmark_project
 ```
 
 ### 2. Create a virtual environment
