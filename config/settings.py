@@ -1,3 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
 """
 Django settings for config project.
 
@@ -20,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3_e&p1-b*3p%dt%v9i6bz#1p14sut_&8b0n=oabwxc0fau5l!9'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

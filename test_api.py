@@ -42,6 +42,22 @@ response = requests.post(
 print("Create Status:", response.status_code)
 print("Response:", response.json())
 
+second_bookmark_data = {
+    "title": "Django Documentation",
+    "url": "https://www.djangoproject.com/",
+    "tags": "Python, Backend"
+}
+
+second_response = requests.post(
+    f"{BASE_URL}/api/bookmarks/",
+    json=second_bookmark_data,
+    headers=headers
+)
+
+print("\nSecond Create Status:", second_response.status_code)
+print("Second Bookmark:", second_response.json())
+
+
 # Get all bookmarks
 response = requests.get(
     f"{BASE_URL}/api/bookmarks/",
